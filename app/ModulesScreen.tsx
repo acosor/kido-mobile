@@ -3,7 +3,7 @@ import { StyleSheet, SafeAreaView, Text, TouchableOpacity, View } from "react-na
 import { NavigationContainerProps } from "react-navigation";
 
 const data = [
-  { label: "Master Data", route: "MasterDataModule" },
+  { label: "Products", route: "ProductsModule" },
   { label: "POS", route: "POSModule" },
   { label: "ORDER", route: "" },
 ];
@@ -21,7 +21,7 @@ const ModulesScreen: React.FC<Props> = ({ navigation }) => {
             onPress={() => navigation.navigate(each.route)}
           >
             <View />
-            <Text style={styles.itemLabel}>{each.label}</Text>
+            <Text style={styles.itemLabel}>{each.label.toUpperCase()}</Text>
           </TouchableOpacity>
         ))}
       </View>

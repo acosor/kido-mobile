@@ -9,7 +9,7 @@ const styles = StyleSheet.create({
 });
 
 interface Props {
-  onPress: () => void;
+  onPress?: () => void;
 }
 
 const CreateNewFAB: React.FC<Props> = ({ onPress }) => (

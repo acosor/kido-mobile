@@ -1,13 +1,13 @@
 import { createAppContainer, createSwitchNavigator } from "react-navigation";
 
 import ModulesScreen from "./ModulesScreen";
-import MasterDataModuleNavi from "./MasterData/MasterDataModuleNavi";
+import ProductsModuleNavi from "./Products/ProductsModuleNavi";
 
 const ModulesNavi = createAppContainer(
   createSwitchNavigator(
     {
       Modules: ModulesScreen,
-      MasterDataModule: MasterDataModuleNavi,
+      ProductsModule: ProductsModuleNavi,
     },
     {
       initialRouteName: "Modules",
