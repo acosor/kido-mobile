@@ -1,28 +1,30 @@
 import React from "react";
 import { StyleSheet, Text, View } from "react-native";
-import { createMaterialTopTabNavigator } from "react-navigation-tabs";
+import { Fab, Icon } from "native-base";
 
-import setModuleBar from "../core/setModuleBar";
+import CreateNewFAB from "../components/CreateNewFAB";
+import withModuleBar from "../components/withModuleBar";
 
 const styles = StyleSheet.create({
   wrapper: {
     backgroundColor: "#fff",
     flex: 1,
   },
-  iconTouch: {
-    marginLeft: 8,
-  }
+  screen: {
+    flex: 1,
+  },
 });
 
 export default class MasterDataScreen extends React.Component {
-  static navigationOptions = setModuleBar("Products");
+  static navigationOptions = withModuleBar({ title: "Products" });
 
   render() {
     return (
-      <View>
+      <View style={styles.screen}>
         <Text>
-          Data1
+          Data
         </Text>
+        <CreateNewFAB />
       </View>
     );
   }

@@ -1,6 +1,6 @@
 import React from "react";
 import { StyleSheet, TouchableOpacity } from "react-native";
-import { MaterialIcons } from "@expo/vector-icons";
+import { MaterialCommunityIcons } from "@expo/vector-icons";
 
 const styles = StyleSheet.create({
   touchableIcon: {
@@ -8,10 +8,10 @@ const styles = StyleSheet.create({
   }
 });
 
-const setModuleBar = (title: string = "") => ({ navigation }) => ({
-  title: title.toUpperCase(),
+const withModuleBar = (props: { title: string; }) => ({ navigation }) => ({
+  title: props.title.toUpperCase(),
   headerStyle: {
-    backgroundColor: "#2d76d2",
+    backgroundColor: "#27d",
   },
   headerTintColor: "#fff",
   headerLeft: (
@@ -19,9 +19,9 @@ const setModuleBar = (title: string = "") => ({ navigation }) => ({
       style={styles.touchableIcon}
       onPress={() => navigation.navigate("Modules")}
     >
-      <MaterialIcons color="#fff" name="apps" size={32} />
+      <MaterialCommunityIcons name="apps" color="#fff" size={32} />
     </TouchableOpacity>
   ),
 });
 
-export default setModuleBar;
+export default withModuleBar;
