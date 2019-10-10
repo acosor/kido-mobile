@@ -1,5 +1,6 @@
 import React from "react";
 import { StyleSheet, Text, View } from "react-native";
+import { NavigationContainerProps } from "react-navigation";
 
 import CreateNewFAB from "../../components/CreateNewFAB";
 import withModuleBar from "../../components/withModuleBar";
@@ -14,7 +15,9 @@ const styles = StyleSheet.create({
   },
 });
 
-export default class HomeScreen extends React.Component<any> {
+interface Props extends NavigationContainerProps { }
+
+export default class HomeScreen extends React.Component<Props> {
   static navigationOptions = withModuleBar({ title: "Products" });
 
   render() {
