@@ -1,13 +1,9 @@
-import React from 'react';
-import { StatusBar } from 'react-native';
-
-import Modules from './app/Modules';
+import React from "react";
+import ModulesNavi from "./app/ModulesNavi";
 
 const App = () => {
-  StatusBar.setHidden(true);
-
   return (
-    <Modules />
+    <ModulesNavi theme="light" />
   );
 }
 
